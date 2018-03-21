@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Testing of SampleProductApp started on `date`
+      - mvn test
+  build:
+    commands:
+      - echo Build of SampleProductApp started on `date`
+      - mvn package -DskipTests
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/spring-boot-web-1.0.0-SNAPSHOT.jar
