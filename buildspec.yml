@@ -9,7 +9,7 @@ phases:
       - sudo chown -R root:root /opt/apache-maven-3.5.3
       - sudo ln -s /opt/apache-maven-3.5.3 /opt/apache-maven
       - echo 'export PATH=$PATH:/opt/apache-maven/bin' | sudo tee -a /etc/profile
-      - source /etc/profile
+      - . /etc/profile
       - mvn --version
   build:
     commands:
