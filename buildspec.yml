@@ -3,12 +3,15 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo Testing of SampleProductApp started on `date`
-      - mvn test
+      - echo Installing maven to the docker container
+	  - sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+      - sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+      - sudo yum install -y apache-maven
+      - mvn --version
   build:
     commands:
       - echo Build of SampleProductApp started on `date`
-      - mvn package -DskipTests
+      - mvn package
   post_build:
     commands:
       - echo Build completed on `date`
