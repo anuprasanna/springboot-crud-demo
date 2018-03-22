@@ -1,0 +1,6 @@
+This is a tips file that is used for record important notes:
+------------------------------------------------------------
+
+* CURL command to create a sample product:
+
+  curl -X POST -F 'productId=110' -F 'name=Dell Vostro i7 Laptop' -F 'price=5000' http://54.87.170.153:8080/product
