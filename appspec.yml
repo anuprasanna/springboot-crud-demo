@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: ./target/spring-boot-web-1.0.0-SNAPSHOT.jar
-    destination: /home/ec2-user/SampleProductApp
+    destination: ~/SampleProductApp
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies

@@ -1,6 +1,6 @@
 #!/bin/bash
 #yum install -y httpd
-cd /home/ec2-user/
+cd ~/
 mkdir -p SampleProductApp
-cd /home/ec2-user/SampleProductApp
+cd ~/SampleProductApp
 
