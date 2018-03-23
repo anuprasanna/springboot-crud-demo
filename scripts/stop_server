@@ -1,3 +1,3 @@
 #!/bin/bash
-curl --connect-timeout 10 -sf -X POST localhost:8080/shutdown
+curl --connect-timeout 10 -sf -X POST localhost:8080/shutdown || true
 exit 0
